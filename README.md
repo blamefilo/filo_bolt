@@ -1,5 +1,7 @@
 # filo_bolt
 
+Store: [filo-studios.tebex.io](https://filo-studios.tebex.io) · Discord: [discord.gg/bErPEKvRXg](https://discord.gg/bErPEKvRXg)
+
 A standalone wheel bolt minigame for FiveM. Players interact with individual lug nuts on a vehicle wheel using a 3D cursor — rotating each bolt to tighten or loosen it. Designed to be called from any resource via a single export.
 
 ---
@@ -136,7 +138,3 @@ filo_bolt/
 
 ---
 
-## License
-
-© filo studios — all rights reserved.  
-Store: [filo-studios.tebex.io](https://filo-studios.tebex.io) · Discord: [discord.gg/bErPEKvRXg](https://discord.gg/bErPEKvRXg)
