@@ -56,7 +56,7 @@ function Start(data)
 
     CreateThread(function()
         -- Setup
-        -- Camera.create(data.vehicle, data.wheelBone)
+        Camera.create(data.vehicle, data.wheelBone)
         local bolts = Bolt.create(data.vehicle, data.wheelBone, data.lugnutCount)
         Wait(500)
 
@@ -161,20 +161,25 @@ end)
 
 exports("Start", Start)
 
--- local options = {}
--- for bone in pairs(WHEEL_BONES) do
---     table.insert(options, {
---         label = "Bolt Test (" .. bone .. ")",
---         bones = { bone },
---         distance = 2.0,
---         onSelect = function(data)
---             local vehicle = data.entity
---             if not vehicle or not DoesEntityExist(vehicle) then return end
---             CreateThread(function()
---                 Start({ vehicle = vehicle, wheelBone = bone, lugnutCount = 6, isTightening = true })
---             end)
---         end,
---     })
--- end
+if Config.Debug then
+    local options = {}
+    for bone in pairs(WHEEL_BONES) do
+        table.insert(options, {
+            label = "Bolt Test (" .. bone .. ")",
+            bones = { bone },
+            distance = 2.0,
+            canInteract = function(data)
+                return not isActive
+            end,
+            onSelect = function(data)
+                local vehicle = data.entity
+                if not vehicle or not DoesEntityExist(vehicle) then return end
+                CreateThread(function()
+                    Start({ vehicle = vehicle, wheelBone = bone, lugnutCount = 6, isTightening = true })
+                end)
+            end,
+        })
+    end
 
--- exports.ox_target:addGlobalVehicle(options)
+    exports.ox_target:addGlobalVehicle(options)
+end
