@@ -12,5 +12,5 @@ WHEEL_SIDE  = {
     ["wheel_rr"] = -1.0,
 }
 
-BOLT_MODEL  = joaat("bolt_01")
+BOLT_MODEL  = joaat("na_screw_car")
 BOLT_RADIUS = 0.075
