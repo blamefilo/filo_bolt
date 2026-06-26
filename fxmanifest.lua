@@ -31,6 +31,10 @@ files {
     'audiodirectory/filo_bolt_sounds.awc'
 }
 
+escrow_ignore {
+    "**/*"
+}
+
 data_file 'AUDIO_WAVEPACK' 'audiodirectory'
 data_file 'AUDIO_SOUNDDATA' 'data/filo_bolt_data_sounds.dat'
 data_file 'DLC_ITYP_REQUEST' 'stream/filo_bolt.ytyp'
