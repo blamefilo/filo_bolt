@@ -74,15 +74,14 @@ end
 ---@param lugnutCount integer Number of bolts to spawn (default 5)
 ---@return table bolts      Array of `{ entity, offsetY, offsetZ }` tables
 ---@return integer boneIndex Bone index of the wheel
----@return number  side     WHEEL_SIDE value for this bone (-1.0 or 1.0)
 local function createBolts(vehicle, wheelBone, lugnutCount)
     lugnutCount = lugnutCount or 5
 
     local boneIndex = GetEntityBoneIndexByName(vehicle, wheelBone)
-    if boneIndex == -1 then return {}, boneIndex, -1.0 end
-    if not loadModel(BOLT_MODEL) then return {}, boneIndex, -1.0 end
+    if boneIndex == -1 then return {}, boneIndex end
+    if not loadModel(BOLT_MODEL) then return {}, boneIndex end
 
-    local side      = WHEEL_SIDE[wheelBone] or -1.0
+    local side      = -1.0
     local stepAngle = (2.0 * math.pi) / lugnutCount
     local heading   = GetEntityHeading(vehicle)
     local spawned   = {}
@@ -123,7 +122,7 @@ local function createBolts(vehicle, wheelBone, lugnutCount)
     end
 
     SetModelAsNoLongerNeeded(BOLT_MODEL)
-    return spawned, boneIndex, side
+    return spawned, boneIndex
 end
 
 ---Deletes a list of bolt entity tables (`{ entity, ... }`).

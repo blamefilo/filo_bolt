@@ -1,5 +1,5 @@
 Config = {
-    Debug = true,      -- Enable debug mode
+    Debug = false,     -- Enable debug mode
     OneAtATime = true, -- Only allow one bolt to be rotated at a time
     OutlineColor = {
         r = 255,
