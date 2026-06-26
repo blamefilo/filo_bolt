@@ -6,11 +6,15 @@ name 'filo_bolt'
 author 'filo studios.'
 discord 'https://discord.gg/bErPEKvRXg'
 description 'A bolt minigame'
-version '1.0.0'
+version '1.0.1'
 
 shared_scripts {
     '@ox_lib/init.lua',
     'shared/sh-config.lua'
+}
+
+server_scripts {
+    "server/sv-version.lua",
 }
 
 client_scripts {
