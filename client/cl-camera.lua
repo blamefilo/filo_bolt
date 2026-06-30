@@ -25,6 +25,8 @@ local function createCamera(vehicle, wheelBone)
     PointCamAtCoord(cam, wheelPos.x, wheelPos.y, wheelPos.z)
     RenderScriptCams(true, true, 1000, true, true)
 
+    FreezeEntityPosition(cache.ped, true)
+    SetEntityCollision(cache.ped, false)
     SetEntityAlpha(cache.ped, 0)
 end
 
@@ -38,6 +40,8 @@ local function deleteCamera()
         cam = 0
     end
 
+    SetEntityCollision(cache.ped, true)
+    FreezeEntityPosition(cache.ped, false)
     ResetEntityAlpha(cache.ped)
 end
 
