@@ -1,10 +1,9 @@
 fx_version 'cerulean'
 game 'gta5'
-lua54 'yes'
 
 name 'filo_bolt'
 author 'filo studios.'
-discord 'https://discord.gg/bErPEKvRXg'
+discord 'https://discord.gg/ReEE9HgA4c'
 description 'A bolt minigame'
 version '1.0.3'
 
