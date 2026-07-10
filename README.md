@@ -1,6 +1,6 @@
 # filo_bolt
 
-Store: [filo-studios.tebex.io](https://filo-studios.tebex.io) · Discord: [discord.gg/gdtBkz9Thj)](https://discord.gg/gdtBkz9Thj)
+Store: [filo-studios.tebex.io](https://filo-studios.tebex.io) · Discord: [discord.gg/gdtBkz9Thj](https://discord.gg/gdtBkz9Thj)
 
 A standalone wheel bolt minigame for FiveM. Players interact with individual lug nuts on a vehicle wheel using a 3D cursor — rotating each bolt to tighten or loosen it. Designed to be called from any resource via a single export.
 
@@ -22,7 +22,7 @@ A standalone wheel bolt minigame for FiveM. Players interact with individual lug
 
 ## Dependencies
 
-- [`ox_lib`](https://github.com/overextended/ox_lib) — used for `cache.ped`
+- [`ox_lib`](https://github.com/overextended/ox_lib)
 
 ---
 
